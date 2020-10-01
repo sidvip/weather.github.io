@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <script src="https://canvasjs.com/assets/script/canvasjs.min.js" type="text/javascript"></script>
+    <link rel="stylesheet" href="./public/css/main.css">
+    <link rel="icon" href="./public/images/logo.png">
+    <title>DEMO WEATHER APP</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+
+    <div class="main-body">
+        <div class="header-div">
+            <img src="./public/images/weather.png" class="image-class">
+            <label class='main-label'> WEATHER APP </label>
+        </div>
+        <div class="main-div">
+            <button class="show-button" onclick="drawCharts()">Click to See Climate Temperature Bar Chart</button>
+    
+            <div style="float:right;">
+                <label class="select-label"> SELECT CHART TYPE : </label>
+                <select onchange="triggerClick(this)">
+                    <option value=""></option>
+                    <option value="column">BAR CHART</option>
+                    <option value="line">LINE CHART</option>
+                </select>
+    
+            </div>
+            <div id="chart-div"></div>
+        </div>
+    </div>
+    <div id="overlaid-div">
+        <div class="loader"></div>
+    </div>
+    <script src="./public/scripts/canvasjs.min.js" type="text/javascript"></script>
+    <script src="./public/scripts/drawChart.js" type="text/javascript"></script>
+
+</body>
+
+</html>
